@@ -1,0 +1,16 @@
+[package]
+name = "hizli-macros"
+version = "0.1.0"
+edition = "2024"
+description = "Hızlı Makes Making Macros Fast"
+license = "MIT"
+documentation = "https://docs.rs/hizli"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+hizli-core = { version = "0.1.0", path = "../hizli-core" }
+proc-macro2 = "1.0.101"
+quote = "1.0.41"
+syn = "2.0.106"

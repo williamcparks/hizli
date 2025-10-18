@@ -1,0 +1,14 @@
+[package]
+name = "hizli-test"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+proc-macro = true
+
+[dependencies]
+hizli = { version = "0.1.0", path = "../hizli" }
+proc-macro2 = "1.0.101"
+quote = "1.0.41"
+syn = "2.0.106"
