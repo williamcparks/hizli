@@ -18,6 +18,7 @@
 //!   and determines the enclosing [`FieldType`] (named, unnamed, or unit).
 //! - [`VariantBinding`] — extends `StructBinding` to enum variants,
 //!   providing both the variant identifier and its field bindings.
+//! - [`NsAttr`] & [`AttrLevel`] provide helpers for creating "Namespaced" attributes.
 //!
 //! Together these types make it easy to:
 //!
@@ -81,9 +82,11 @@
 
 mod bindings;
 mod data;
+mod ns_attr;
 mod rules;
 mod spanable;
 
 pub use bindings::{FieldBinding, FieldType, StructBinding, VariantBinding};
 pub use data::{EnumOnly, StructEnumOnly, StructOnly};
+pub use ns_attr::{AttrLevel, NsAttr};
 pub use spanable::Spanable;
