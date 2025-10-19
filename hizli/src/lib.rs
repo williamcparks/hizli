@@ -18,6 +18,7 @@
 //!   and determines the enclosing [`FieldType`] (named, unnamed, or unit).
 //! - [`VariantBinding`] — extends `StructBinding` to enum variants,
 //!   providing both the variant identifier and its field bindings.
+//! - [`NsAttr`] & [`AttrLevel`] provide helpers for creating "Namespaced" attributes.
 //!
 //! Together these types make it easy to:
 //!
