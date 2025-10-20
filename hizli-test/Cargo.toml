@@ -1,9 +1,9 @@
 [package]
 name = "hizli-test"
-version = "0.1.0"
+version = "0.1.5"
 edition = "2024"
 publish = false
 
 [dependencies]
-hizli = { version = "0.1.0", path = "../hizli" }
+hizli = { version = "0.1.5", path = "../hizli" }
 proc-macro2 = "1.0.101"
