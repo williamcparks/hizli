@@ -28,3 +28,24 @@ macro_rules! out {
         })
     };
 }
+
+/// Converts Results Into [`syn::Error`] and bubbles.
+///
+/// # Syntax
+///
+/// ```no_run
+/// let span = Span::call_site();
+/// let my_result: Result<(), String> = Ok(());
+/// let ok_value = tri!(my_result, span);
+/// ```
+#[macro_export]
+macro_rules! tri {
+    ($expr: expr, $span: expr) => {
+        match $expr {
+            ::core::result::Result::Ok(ok) => ok,
+            ::core::result::Result::Err(err) => {
+                return ::core::result::Result::Err(::syn::Error::new($span, err))
+            }
+        }
+    };
+}
