@@ -84,9 +84,7 @@ mod bindings;
 mod data;
 mod ns_attr;
 mod rules;
-mod spanable;
 
 pub use bindings::{FieldBinding, FieldType, StructBinding, VariantBinding};
 pub use data::{EnumOnly, StructEnumOnly, StructOnly};
 pub use ns_attr::{AttrLevel, NsAttr};
-pub use spanable::Spanable;

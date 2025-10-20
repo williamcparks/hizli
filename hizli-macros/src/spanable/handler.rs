@@ -16,7 +16,8 @@ pub fn handler(input: DeriveInput) -> Result<TokenStream> {
     };
 
     Ok(quote! {
-        impl #impl_gen ::hizli::Spanable for #ident #type_gen #where_cl {
+        #[automatically_derived]
+        impl #impl_gen #ident #type_gen #where_cl {
             fn spanable(&self) -> ::proc_macro2::Span {
                 #block
             }

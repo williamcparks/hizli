@@ -133,7 +133,7 @@
 //!
 //! ### `#[derive(Spanable)]`
 //!
-//! Implements the `hizli::Spanable` trait, which provides a `spanable(&self) -> proc_macro2::Span` method.
+//! Implements the `span(&self)` method.
 //!
 //! - For **structs**, it returns the span of the first field if one exists,
 //!   or the call-site span if the struct has no fields.  
@@ -143,7 +143,6 @@
 //! #### Example
 //! ```rust
 //! use hizli_macros::Spanable;
-//! use hizli::Spanable;
 //! use proc_macro2::Span;
 //! use syn::LitStr;
 //!
@@ -154,7 +153,7 @@
 //! }
 //!
 //! let leaf = Node::Other;
-//! let span = leaf.spanable();
+//! let span = leaf.span();
 //! ```
 
 pub use hizli_core::*;

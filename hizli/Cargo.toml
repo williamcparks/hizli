@@ -1,11 +1,11 @@
 [package]
 name = "hizli"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "Hızlı Makes Making Macros Fast"
 license = "MIT"
 documentation = "https://docs.rs/hizli"
 
 [dependencies]
-hizli-core = { version = "0.1.1", path = "../hizli-core" }
-hizli-macros = { version = "0.1.1", path = "../hizli-macros" }
+hizli-core = { version = "0.1.2", path = "../hizli-core" }
+hizli-macros = { version = "0.1.2", path = "../hizli-macros" }

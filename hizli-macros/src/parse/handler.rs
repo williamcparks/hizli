@@ -15,6 +15,7 @@ pub fn handler(input: DeriveInput) -> Result<TokenStream> {
     };
 
     Ok(quote! {
+        #[automatically_derived]
         impl #impl_gen ::syn::parse::Parse for #ident #type_gen #where_cl {
             fn parse(input: ::syn::parse::ParseStream) -> ::syn::Result<Self> {
                 #block
