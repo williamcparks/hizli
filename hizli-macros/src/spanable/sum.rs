@@ -10,7 +10,7 @@ fn arm(variant: &Variant) -> TokenStream {
     let expr = match binding.field_bindings().iter().next() {
         Some(some) => {
             let ident = some.ident();
-            quote! { ::hizli::Spanable::spanable(#ident) }
+            quote! { #ident.span() }
         }
         None => quote! { ::proc_macro2::Span::call_site() },
     };
